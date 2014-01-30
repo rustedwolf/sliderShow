@@ -54,7 +54,7 @@
                 $this.on("mouseleave.slider-show", function() {
                     $this.sliderShow("resumeAnimation");
                 });
-                $this.on("click.sliderShow", settings.pager_item, function() {
+                $this.on("click.sliderShow", $this.data('sliderShow').pager_item, function() {
                     var $pagerItem = $(this);
                     var data = $this.data("sliderShow");
                     var itemIndex = $pagerItem.index();
@@ -97,7 +97,7 @@
         setActivePager: function(index) {
             return this.each(function() {
                 var $this = $(this);
-                var data = $nextPager.data("sliderShow");
+                var data = $this.data("sliderShow");
                 var $nextPager = $this.find(data.pager_item + ":eq(" + index + ")");
                 $nextPager.addClass("active");
             });
