@@ -105,6 +105,7 @@
         unsetActive: function() {
             return this.each(function() {
                 var $this = $(this);
+                var data = $this.data("sliderShow");
                 var $previousItem = $this.find(data.pager_item + ".active");
                 $previousItem.removeClass("active");
             });
