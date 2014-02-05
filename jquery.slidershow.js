@@ -141,14 +141,14 @@
         loopItems: function() {
             var $this = $(this);
             var data = $this.data("sliderShow");
-            if (data.can_continue) {
+            if (data !== undefined) {
                 var activeIndex = data.active_slide_index;
                 activeIndex = (activeIndex + 1) % data.slide_count;
                 $this.sliderShow('hideInactiveSlides');
                 $this.sliderShow('showSlide', activeIndex);
 
                 sliderTimer = setTimeout(function() {
-                    if ($this !== undefined && data.can_continue) {
+                    if (data.can_continue) {
                         return $this.sliderShow('loopItems');
                     }
                 }, data.animation_timeout);
