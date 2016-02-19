@@ -1,9 +1,8 @@
-/*
+/**
  * Slider Show jQuery plugin v1.1.0
  *
- * Copyright (c) 2014 Ryszard Narkiewicz @RyszardRudy
- * Licensed under MIT licence
- *  
+ * @author Ryszard Narkiewicz
+ * @license MIT
  */
 (function($) {
 
